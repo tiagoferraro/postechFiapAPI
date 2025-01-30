@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rabbitmq-shared-config
+  labels:
+    app: shared-config
+data:
+  RabbitMQ__HostName: "rabbitmq"
+  RabbitMQ__UserName: "guest"
+  RabbitMQ__Password: "guest"
+  RabbitMQ__Port: "5672"

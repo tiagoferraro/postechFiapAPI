@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wkupdate-config
+  labels:
+    app: wkupdate
+data:
+  Logging__LogLevel__Default: "Information"
+  Logging__LogLevel__Microsoft.Hosting.Lifetime: "Information"  
+  RabbitMQ__Exchange: "Fase3.Contatos.Update"
+  RabbitMQ__QueueName: "Fase3.Contatos.UpdatetoDataBase"
+  
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apipostech-deployment-update
+  labels:
+    app: apipostechupdate
+spec:
+  replicas: 7  # Número de réplicas desejadas
+  selector:
+    matchLabels:
+      app: apipostechupdate  # Seleciona os pods com esta label
+  template:
+    metadata:
+      labels:
+        app: apipostechupdate  # Label aplicada aos pods
+    spec:
+      containers:
+      - name: apipostechupdate
+        image: postech-update:1.0 
+        ports:
+        - containerPort: 8080  
+        envFrom:
+        - configMapRef:
+            name: wkupdate-config
+        - configMapRef:
+            name: rabbitmq-shared-config
+        - configMapRef:
+            name: database-shared-config    

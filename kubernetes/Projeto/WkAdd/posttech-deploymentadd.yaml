@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wkadd-config
+  labels:
+    app: wkadd
+data:
+  Logging__LogLevel__Default: "Information"
+  Logging__LogLevel__Microsoft.Hosting.Lifetime: "Information"  
+  RabbitMQ__Exchange: "Fase3.Contatos.Add"
+  RabbitMQ__QueueName: "Fase3.Contatos.AddtoDataBase"
+  
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apipostech-deployment-add
+  labels:
+    app: apipostechadd
+spec:
+  replicas: 5  # Número de réplicas desejadas
+  selector:
+    matchLabels:
+      app: apipostechadd  # Seleciona os pods com esta label
+  template:
+    metadata:
+      labels:
+        app: apipostechadd  # Label aplicada aos pods
+    spec:
+      containers:
+      - name: apipostechadd
+        image: postech-add:1.2
+        ports:
+        - containerPort: 8080  
+        envFrom:
+        - configMapRef:
+            name: wkadd-config
+        - configMapRef:
+            name: rabbitmq-shared-config
+        - configMapRef:
+            name: database-shared-config    

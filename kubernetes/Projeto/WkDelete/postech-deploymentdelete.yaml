@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wkdelete-config
+  labels:
+    app: wkdelete
+data:
+  Logging__LogLevel__Default: "Information"
+  Logging__LogLevel__Microsoft.Hosting.Lifetime: "Information"  
+  RabbitMQ__Exchange: "Fase3.Contatos.Delete"
+  RabbitMQ__QueueName: "Fase3.Contatos.DeletetoDataBase"
+  
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apipostech-deployment-delete
+  labels:
+    app: apipostechdelete
+spec:
+  replicas: 3  # Número de réplicas desejadas
+  selector:
+    matchLabels:
+      app: apipostechdelete  # Seleciona os pods com esta label
+  template:
+    metadata:
+      labels:
+        app: apipostechdelete  # Label aplicada aos pods
+    spec:
+      containers:
+      - name: apipostechdelete
+        image: postech-delete:1.0 
+        ports:
+        - containerPort: 8080  
+        envFrom:
+        - configMapRef:
+            name: wkdelete-config
+        - configMapRef:
+            name: rabbitmq-shared-config
+        - configMapRef:
+            name: database-shared-config    

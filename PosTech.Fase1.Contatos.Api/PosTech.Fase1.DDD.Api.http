@@ -1,0 +1,26 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@hostname = http://localhost:5196/api
+@controller = DDD
+
+Post {{hostname}}/{{controller}}
+Content-Type: application/json
+Accept: application/json
+
+{
+    "DDDId": "11",
+    "UFSigla": "SP",
+    "Regiao": "São Paulo"
+}
+###
+GET {{hostname}}/{{controller}}
+Accept: application/json
+
+###
+PUT {{hostname}}/{{controller}}
+Content-Type: application/json
+Accept: application/json
+{
+    "DDDId": "11",
+    "UFSigla": "SP",
+    "Regiao": "São Paulo"
+} 

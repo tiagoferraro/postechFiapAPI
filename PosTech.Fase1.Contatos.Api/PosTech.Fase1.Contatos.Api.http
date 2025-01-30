@@ -1,0 +1,34 @@
+@hostname = http://localhost:52850/api
+@controller = Contatos
+
+Post {{hostname}}/{{controller}}
+Content-Type: application/json
+Accept: application/json
+
+{
+    "Nome": "Mario 1",
+    "Telefone": "963333243",
+    "Email": "silveira.mho@gmail.com",
+    "Ativo": true,
+    "DddId": 11
+}
+
+###
+Put {{hostname}}/{{controller}}
+Content-Type: application/json
+Accept: application/json
+
+{
+    "ContatoId": 11,
+    "Nome": "Mario 2",
+    "Telefone": "963333243",
+    "Email": "silveira.mho@gmail.com",
+    "Ativo": true,
+    "DddId": 11
+}
+
+###
+Get {{hostname}}/{{controller}}
+Accept: application/json
+
+

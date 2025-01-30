@@ -1,0 +1,72 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: rabbitmq1-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /data/rabbitmq  # Diretório onde os dados serão armazenados
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rabbitmq1-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq
+  template:
+    metadata:
+      labels:
+        app: rabbitmq
+    spec:
+      containers:
+      - name: rabbitmq
+        image: rabbitmq:4.0-management
+        ports:
+        - containerPort: 15672  # Porta para acessar o RabbitMQ Management UI
+        - containerPort: 5672   # Porta para comunicação com outros serviços
+        volumeMounts:
+        - name: rabbitmq1-data
+          mountPath: /var/lib/rabbitmq  # Local onde os dados do RabbitMQ serão armazenados
+      volumes:
+      - name: rabbitmq1-data
+        persistentVolumeClaim:
+          claimName: rabbitmq1-pvc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq
+spec:
+  selector:
+    app: rabbitmq
+  ports:
+    - protocol: TCP
+      port: 5672
+      targetPort: 5672
+      name: amqp-port
+    - protocol: TCP
+      port: 15672
+      targetPort: 15672
+      name: management-port
+  type: ClusterIP

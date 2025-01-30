@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'ApiContatos'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.1.183:5196']
+  - job_name: 'ConsumerContatosAdd'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.1.183:5001']
+  - job_name: 'ConsumerContatosUpdate'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.1.183:5002']
+  - job_name: 'ConsumerContatosDelete'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.1.183:5003']
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['localhost:9090']
