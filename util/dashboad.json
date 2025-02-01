@@ -38,7 +38,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -91,7 +91,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -108,7 +108,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -161,7 +161,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -178,7 +178,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -232,7 +232,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -249,7 +249,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -310,7 +310,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -327,7 +327,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -388,7 +388,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -405,7 +405,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -466,7 +466,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -496,7 +496,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -585,7 +585,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "disableTextWrap": false,
           "editorMode": "code",
@@ -605,7 +605,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -660,7 +660,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "disableTextWrap": false,
           "editorMode": "code",
@@ -681,7 +681,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -745,7 +745,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "expr": "process_start_time_seconds{instance =~ \"$instances\"} * 1000",
           "format": "time_series",
@@ -760,7 +760,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -813,7 +813,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "disableTextWrap": false,
           "editorMode": "code",
@@ -833,7 +833,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -919,7 +919,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "expr": "process_num_threads",
           "format": "time_series",
@@ -947,7 +947,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -1035,7 +1035,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "disableTextWrap": false,
           "editorMode": "code",
@@ -1059,7 +1059,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -1140,7 +1140,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "editorMode": "code",
           "expr": "sum(increase(http_request_duration_seconds_bucket[$interval])) by (le)",
@@ -1158,7 +1158,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -1243,7 +1243,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "expr": "increase(dotnet_collection_count_total[$interval])",
           "format": "time_series",
@@ -1258,7 +1258,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -1370,7 +1370,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "expr": "process_working_set_bytes /1024/1024",
           "format": "time_series",
@@ -1386,7 +1386,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -1473,7 +1473,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "expr": "process_open_handles",
           "format": "time_series",
@@ -1489,7 +1489,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fdv1hdfeerg1sc"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "fieldConfig": {
         "defaults": {
@@ -1574,7 +1574,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fdv1hdfeerg1sc"
+            "uid": "P1809F7CD0C75ACF3"
           },
           "expr": "dotnet_total_memory_bytes /1024/1024",
           "format": "time_series",
@@ -1680,7 +1680,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "fdv1hdfeerg1sc"
+          "uid": "P1809F7CD0C75ACF3"
         },
         "definition": "label_values(http_requests_received_total, instance)",
         "hide": 0,
