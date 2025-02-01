@@ -17,7 +17,7 @@ metadata:
   labels:
     app: apipostech
 spec:
-  replicas: 5  # Número de réplicas desejadas
+  replicas: 2  # Número de réplicas desejadas
   selector:
     matchLabels:
       app: apipostech  # Seleciona os pods com esta label
