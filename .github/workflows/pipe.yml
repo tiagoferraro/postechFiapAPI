@@ -32,7 +32,7 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         context: .
-        file: Postech.Fase1.Contatos.Api/Dockerfile
+        file: PosTech.Fase1.Contatos.Api/Dockerfile
         push: false
         tags: postech-contatos:latest
         load: true
