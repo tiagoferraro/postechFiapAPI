@@ -20,7 +20,7 @@ metadata:
   labels:
     app: apipostechdelete
 spec:
-  replicas: 3  # Número de réplicas desejadas
+  replicas: 2  # Número de réplicas desejadas
   selector:
     matchLabels:
       app: apipostechdelete  # Seleciona os pods com esta label
@@ -28,9 +28,14 @@ spec:
     metadata:
       labels:
         app: apipostechdelete  # Label aplicada aos pods
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/metrics"
     spec:
       containers:
       - name: apipostechdelete
+
         image: postech-delete:1.0 
         ports:
         - containerPort: 8080  

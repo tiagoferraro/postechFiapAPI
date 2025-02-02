@@ -20,14 +20,19 @@ metadata:
   labels:
     app: apipostechadd
 spec:
-  replicas: 5  # Número de réplicas desejadas
+  replicas: 2  # Número de réplicas desejadas
   selector:
     matchLabels:
-      app: apipostechadd  # Seleciona os pods com esta label
+      app: apipostechadd  
+
   template:
     metadata:
       labels:
-        app: apipostechadd  # Label aplicada aos pods
+        app: apipostechadd  # Label aplicada aos pods        
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/metrics"
     spec:
       containers:
       - name: apipostechadd

@@ -20,7 +20,7 @@ metadata:
   labels:
     app: apipostechupdate
 spec:
-  replicas: 7  # Número de réplicas desejadas
+  replicas: 2  # Número de réplicas desejadas
   selector:
     matchLabels:
       app: apipostechupdate  # Seleciona os pods com esta label
@@ -28,9 +28,14 @@ spec:
     metadata:
       labels:
         app: apipostechupdate  # Label aplicada aos pods
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/metrics"
     spec:
       containers:
       - name: apipostechupdate
+
         image: postech-update:1.0 
         ports:
         - containerPort: 8080  
